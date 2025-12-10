@@ -1,0 +1,136 @@
+/* ========== NAVBAR ========== */
+
+.navbar {
+    background: linear-gradient(180deg, #0f5f2f 0%, #0b3d1f 100%);
+    color: #ffffff;
+    border-bottom: 4px solid #d4af37; /* gold */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 16px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Bagian atas: logo besar + nama lembaga */
+.navbar-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    text-align: center;
+}
+
+.navbar-logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid #d4af37;
+    background: #ffffff;
+}
+
+.navbar-title h1 {
+    margin: 0;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.navbar-title p {
+    margin: 2px 0 0;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+/* Tombol toggle (HP) */
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: 1px solid #d4af37;
+    color: #ffffff;
+    padding: 6px 10px;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+/* Wrapper menu */
+.navbar-menu-wrapper {
+    margin-top: 6px;
+}
+
+/* Menu utama */
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.nav-item > a {
+    display: block;
+    padding: 8px 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 3px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-item > a:hover {
+    background: #d4af37;
+    color: #0b3d1f;
+}
+
+/* Dropdown */
+.nav-item.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background: #0b3d1f;
+    border: 1px solid #d4af37;
+    border-radius: 4px;
+    list-style: none;
+    padding: 6px 0;
+    margin: 4px 0 0;
+    display: none;
+    z-index: 999;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background: #d4af37;
+    color: #0b3d1f;
+}
+
+/* Tampilkan dropdown saat hover (desktop) */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
